@@ -32,7 +32,8 @@ lazy val input = project.settings(
 )
 
 lazy val output = project.settings(
-  skip in publish := true
+  skip in publish := true,
+  libraryDependencies += "org.typelevel"   %% "cats-effect"  % "1.1.0"
 )
 
 lazy val tests = project

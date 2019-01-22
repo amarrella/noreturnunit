@@ -5,15 +5,15 @@ package fix
 
 trait Noreturnunit {
 
-  def foo: Unit// assert: Noreturnunit.ReturnError
+  def foo: Unit
 
-  val bar: Unit// assert: Noreturnunit.ReturnError
+  val bar: Unit
 
-  def baz {// assert: Noreturnunit.ReturnError
+  def baz {
     println("I return unit")
   }
 
-  def qux = {// assert: Noreturnunit.ReturnError
+  def qux = {
     println("I return unit too")
   }
 

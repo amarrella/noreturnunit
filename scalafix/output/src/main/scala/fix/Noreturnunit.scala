@@ -1,16 +1,17 @@
 package fix
 
+import cats.effect.IO
 trait Noreturnunit {
 
-  def foo: Unit
+  def foo: IO[Unit]
 
-  val bar: Unit
+  val bar: IO[Unit]
 
-  def baz {
+  def baz = IO {
     println("I return unit")
   }
 
-  def qux = {
+  def qux = IO {
     println("I return unit too")
   }
 
